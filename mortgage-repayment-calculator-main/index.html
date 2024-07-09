@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+        <h1>Mortgage Calculator</h1>
+     <form id="mortgageForm">
+        <label for="mortgageAmount">Mortgage Amount</label><br>
+        <input type="integer" id="mortgageAmount" name="mortgageAmount" placeholder="£" value="£" required>
+        <br><br>
+          
+        <label for="mortgageTerm">Mortgage Term </label><br>
+        <input type="float" id="mortgageTerm" name="mortgageTerm" placeholder="years" required>
+        <br><br>
+
+        <label for="mortgageRate">Interest Rate </label><br>
+        <input type="float" id="interestRate" name="interestRate"  placeholder="%" required>
+        <br><br>
+          
+         <label for="mortagetype">Mortgage Type</label>
+                <div>
+                    <input type="radio" id="repayment" name="mortgagetype" value="repayment" >
+                    <label for="repayment">Repayment</label>
+                </div>
+                <div>
+                    <input type="radio" id="interest-only" name="mortgagetype" value="interest-only">
+                    <label for="interest-only">Interest Only</label>
+                </div>
+                <br><br>
+        <button type="button" onclick="calculateMortgage() ">Calculate Repayments</button>
+      </form>
+    </div>
+     
+    <div class="result">
+        <b>Results show here</b>
+        <p>Complete the form and click "Calculate Repayments" to see what your monthly repayments would be </p>
+        <form class="display results">
+           <label for="monthly repayment">Your monthly repayment is</label><br>
+           <p id="result1"></p>
+           <br><br>
+           <label for= "total repayment">Your total repayment is</label><br>
+           <p id="result2"></p>
+        </form>
+     </div>
+  </div>
+     <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Mr Javeason</a>.
+  </div>
+
+  <script type="text/javascript" src="style.js"></script>
+</body>
+</html>
